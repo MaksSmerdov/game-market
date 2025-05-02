@@ -3,8 +3,8 @@ import {useNavigate} from "react-router-dom";
 import styles from "./Profile.module.scss";
 import avatarBefore from "../../assets/svg/test.svg";
 import avatarSuccess from "../../assets/svg/success.svg";
-import Button from "../../ui/Button/Button";
-import Tag from "../../ui/Tag/Tag";
+import Button from "../UI/Button/Button.tsx";
+import Tag from "../UI/Tag/Tag.tsx";
 import {Footer} from "../Footer/Footer";
 
 interface ProfileProps {

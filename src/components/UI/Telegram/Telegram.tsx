@@ -1,6 +1,6 @@
 import React, {ReactNode} from "react";
 import styles from "./Telegram.module.scss";
-import telegramSrc from "../../assets/svg/telegram.svg";
+import telegramSrc from "../../../assets/svg/telegram.svg";
 
 interface TelegramProps {
   children: ReactNode;

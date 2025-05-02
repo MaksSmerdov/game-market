@@ -1,0 +1,39 @@
+@use "../../../styles/mixins" as mixins;
+@use "../../../styles/variables" as vars;
+
+.header {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &__logo {
+    width: 60px;
+    height: auto;
+    color: vars.$white;
+    transition: color 0.5s ease;
+
+    &:hover {
+      color: vars.$puissant-purple;
+      cursor: pointer;
+    }
+  }
+
+  &--link {
+    display: inline-block;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding-left: 10px;
+    justify-content: flex-start;
+
+    &__logo {
+      width: 35px;
+      height: 26px;
+    }
+  }
+}

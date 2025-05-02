@@ -1,7 +1,7 @@
 import React, {ChangeEvent, useContext} from 'react';
 import styles from './Checkbox.module.scss';
-import okSrc from '../../assets/svg/ok.svg';
-import {ResponsiveContext} from "../../context/ResponsiveContext.tsx";
+import okSrc from '../../../assets/svg/ok.svg';
+import {ResponsiveContext} from "../../../context/ResponsiveContext.tsx";
 
 export interface CheckboxProps {
   checked?: boolean;

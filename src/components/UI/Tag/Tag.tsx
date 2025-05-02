@@ -1,6 +1,6 @@
 import React, {ReactNode} from 'react';
 import styles from './Tag.module.scss';
-import infoSrc from '../../assets/svg/info.svg'
+import infoSrc from '../../../assets/svg/info.svg'
 
 export interface TagProps {
   variant?: 'timer';

@@ -1,16 +1,15 @@
 import React, {useState, FormEvent} from 'react';
 import {useNavigate} from 'react-router-dom';
 import styles from './Auth.module.scss';
-import Button from '../../ui/Button/Button';
-import Input from '../../ui/Input/Input';
-import Checkbox from '../../ui/Checkbox/Checkbox';
-import Toast from '../../ui/Toast/Toast';
+import Button from "../UI/Button/Button.tsx";
+import Input from "../UI/Input/Input.tsx";
+import Checkbox from "../UI/Checkbox/Checkbox.tsx";
+import Toast from "../UI/Toast/Toast.tsx";
 import {Footer} from '../Footer/Footer';
 
 const Auth: React.FC = () => {
   const [code, setCode] = useState('');
   const [isHuman, setIsHuman] = useState(false);
-
   const [inputError, setInputError] = useState(false);
   const [checkboxError, setCheckboxError] = useState(false);
   const [showErrorToast, setShowErrorToast] = useState(false);

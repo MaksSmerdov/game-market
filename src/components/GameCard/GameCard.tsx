@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './GameCard.module.scss';
 import coverImg from '../../assets/card.png';
-import Tag from "../../ui/Tag/Tag.tsx";
+import Tag from "../UI/Tag/Tag.tsx";
 
 const GameCard: React.FC = () => (
   <div className={styles['game-card']}>

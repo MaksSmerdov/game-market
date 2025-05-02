@@ -1,6 +1,6 @@
 import React, {useContext, ButtonHTMLAttributes} from 'react';
 import styles from './Button.module.scss';
-import {ResponsiveContext} from "../../context/ResponsiveContext.tsx";
+import {ResponsiveContext} from "../../../context/ResponsiveContext.tsx";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import styles from "./Footer.module.scss";
-import LanguageSwitcher from "../../ui/LanguageSwitcher/LanguageSwitcher";
-import Telegram from "../../ui/Telegram/Telegram";
+import LanguageSwitcher from "../UI/LanguageSwitcher/LanguageSwitcher.tsx";
+import Telegram from "../UI/Telegram/Telegram.tsx";
 
 interface FooterProps {
   mode?: "default" | "success";
@@ -28,7 +28,7 @@ export const Footer: React.FC<FooterProps> = ({mode = "default"}) => {
           <>
             <a
               className={styles["footer-link"]}
-              href="https://store.steampowered.com/account/licenses/"
+              href="https://store.steampowered.com/"
               target="_blank"
               rel="noreferrer"
             >
@@ -36,7 +36,7 @@ export const Footer: React.FC<FooterProps> = ({mode = "default"}) => {
             </a>
             <a
               className={styles["footer-link"]}
-              href="steam://nav/games/details/123456"
+              href="https://store.steampowered.com/"
             >
               Посмотреть игру
             </a>

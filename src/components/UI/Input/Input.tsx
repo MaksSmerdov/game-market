@@ -1,6 +1,6 @@
 import React, {InputHTMLAttributes, useContext} from 'react';
 import styles from './Input.module.scss';
-import {ResponsiveContext} from "../../context/ResponsiveContext.tsx";
+import {ResponsiveContext} from "../../../context/ResponsiveContext.tsx";
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   className?: string;

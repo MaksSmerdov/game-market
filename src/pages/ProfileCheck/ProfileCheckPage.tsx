@@ -3,7 +3,7 @@ import GameCard from '../../components/GameCard/GameCard.tsx';
 import Profile from '../../components/Profile/Profile.tsx';
 import styles from './ProfileCheckPage.module.scss';
 import {ResponsiveContext} from "../../context/ResponsiveContext.tsx";
-import Logotip from "../../ui/Logotip/Logotip.tsx";
+import Logotip from "../../components/UI/Logotip/Logotip.tsx";
 
 const ProfileCheckPage: React.FC = () => {
   const {isMobile} = useContext(ResponsiveContext);
