@@ -1,0 +1,64 @@
+@use "../../styles/mixins" as mixins;
+@use "../../styles/variables" as vars;
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  gap: 10px;
+  user-select: none;
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  &__box {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 1.4px solid vars.$white;
+    border-radius: 5px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+    color: vars.$vega-violet;
+  }
+
+  &__label {
+    pointer-events: none;
+    color: #888;
+  }
+
+  &--checked {
+    .checkbox__box {
+      background-color: vars.$blackcurrant;
+      border-color: transparent;
+    }
+  }
+
+  &--error {
+    .checkbox__box {
+      border: 2px solid vars.$arterial-blood-red;
+      background: transparent;
+    }
+  }
+}
+
+.checkbox--desktop {
+  font-size: 20px;
+}
+
+.checkbox--mobile {
+  font-size: 14px;
+}

@@ -1,0 +1,49 @@
+@use "../../styles/variables" as vars;
+
+.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+  font-size: 20px;
+  line-height: 1.3;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background-color: vars.$blackcurrant;
+  border: 2px solid vars.$puissant-purple;
+  color: vars.$white;
+  user-select: none;
+
+  &-info {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .tag {
+    font-size: 16px;
+    padding: 4px;
+    gap: 6px;
+
+    &-info {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+}
+
+@media (max-width: 768px) {
+  .tag {
+    font-size: 14px;
+    padding: 4px;
+    gap: 6px;
+
+    &-info {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+}

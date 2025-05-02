@@ -1,0 +1,31 @@
+@use "../../styles/mixins" as mixins;
+@use "../../styles/variables" as vars;
+
+.check__page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  background-color: vars.$pot-black;
+}
+
+@media (max-width: 1280px) {
+  .check__page {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .check__page {
+    gap: initial;
+    background: linear-gradient(to bottom, vars.$blackcurrant 0%, vars.$pot-black 50%);
+    align-items: initial;
+
+    &--success {
+      background: linear-gradient(to bottom, rgba(64, 234, 21, 0.6) 0%, vars.$pot-black 40%) !important;
+    }
+  }
+
+}

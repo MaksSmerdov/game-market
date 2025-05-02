@@ -1,0 +1,28 @@
+@use "../../styles/mixins" as mixins;
+@use "../../styles/variables" as vars;
+
+.input {
+  padding: 0 12px;
+  text-align: center;
+  outline: none;
+  background: transparent;
+  border: 2px solid vars.$machine-gun-metal;
+  border-radius: 4px;
+  color: vars.$white;
+  font-weight: 500;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.input--desktop {
+  height: 51px;
+  font-size: 20px;
+}
+
+.input--mobile {
+  height: 40px;
+  font-size: 14px;
+}
+
+.error {
+  border: 1px solid red;
+}

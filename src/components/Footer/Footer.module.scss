@@ -1,0 +1,49 @@
+@use "../../styles/mixins" as mixins;
+@use "../../styles/variables" as vars;
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  &-link {
+    margin-top: 27px;
+    font-size: 20px;
+    color: vars.$white;
+    align-items: center;
+    transition: color 0.5s ease;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      color: vars.$vega-violet;
+    }
+  }
+
+  &-settings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+
+  &--stack {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+
+    &-link {
+      font-size: 14px;
+    }
+  }
+
+}

@@ -1,0 +1,25 @@
+@use "../../styles/mixins" as mixins;
+@use "../../styles/variables" as vars;
+
+.switcher {
+  display: flex;
+  gap: 5px;
+
+  &__button {
+    padding: 7px 8px;
+    font-size: 14px;
+    color: vars.$white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.5s ease;
+
+    &:hover {
+      background-color: vars.$nero;
+    }
+
+    &--active {
+      background-color: vars.$blackcurrant !important;
+      color: vars.$vega-violet;
+    }
+  }
+}
