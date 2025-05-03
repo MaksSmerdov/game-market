@@ -35,26 +35,28 @@ const Checkbox: React.FC<CheckboxProps> = ({
     .join(' ');
 
   return (
-    <label className={mods}>
-      <input
-        type="checkbox"
-        className={styles['checkbox__input']}
-        checked={checked}
-        onChange={handleChange}
-      />
-      <span className={styles['checkbox__box']}>
-        {checked && !error && (
-          <img
-            src={okSrc}
-            alt="ok"
-            className={styles['checkbox__icon']}
-          />
-        )}
-      </span>
+    <div className={mods}>
+      <label className={styles['checkbox__container']}>
+        <input
+          type="checkbox"
+          className={styles['checkbox__input']}
+          checked={checked}
+          onChange={handleChange}
+        />
+        <span className={styles['checkbox__box']}>
+          {checked && !error && (
+            <img
+              src={okSrc}
+              alt="ok"
+              className={styles['checkbox__icon']}
+            />
+          )}
+        </span>
+      </label>
       <span className={styles['checkbox__label']}>
         {label}
       </span>
-    </label>
+    </div>
   );
 };
 
