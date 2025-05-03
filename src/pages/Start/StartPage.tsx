@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './StartPage.module.scss';
-import Auth from "../../components/Auth/Auth.tsx";
-import Logotip from "../../components/UI/Logotip/Logotip.tsx";
+import Auth from '../../components/Auth/Auth.tsx';
+import Logotip from '../../components/UI/Logotip/Logotip.tsx';
 
 const StartPage: React.FC = () => (
   <div className={`${styles['page']}`}>
-    <Logotip/>
+    <Logotip />
     <main className={`${styles['main']}`}>
-      <Auth/>
+      <Auth />
     </main>
   </div>
 );

@@ -1,11 +1,11 @@
-import React, {useState, FormEvent} from 'react';
-import {useNavigate} from 'react-router-dom';
+import React, { useState, FormEvent } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './Auth.module.scss';
-import Button from "../UI/Button/Button.tsx";
-import Input from "../UI/Input/Input.tsx";
-import Checkbox from "../UI/Checkbox/Checkbox.tsx";
-import Toast from "../UI/Toast/Toast.tsx";
-import {Footer} from '../Footer/Footer';
+import Button from '../UI/Button/Button.tsx';
+import Input from '../UI/Input/Input.tsx';
+import Checkbox from '../UI/Checkbox/Checkbox.tsx';
+import Toast from '../UI/Toast/Toast.tsx';
+import { Footer } from '../Footer/Footer';
 
 const Auth: React.FC = () => {
   const [code, setCode] = useState('');
@@ -47,9 +47,7 @@ const Auth: React.FC = () => {
         </div>
       )}
 
-      <h1 className={styles['auth__title']}>
-        {`Введите уникальный\nкод заказа`}
-      </h1>
+      <h1 className={styles['auth__title']}>{`Введите уникальный\nкод заказа`}</h1>
 
       <div className={styles['auth__body']}>
         <div className={styles['auth__body-controls']}>
@@ -57,7 +55,7 @@ const Auth: React.FC = () => {
             type="text"
             placeholder="Введите уникальный код"
             value={code}
-            onChange={e => {
+            onChange={(e) => {
               setCode(e.target.value);
               if (inputError) {
                 setInputError(false);
@@ -73,14 +71,14 @@ const Auth: React.FC = () => {
           checked={isHuman}
           error={checkboxError}
           label="Я не робот"
-          onChange={checked => {
+          onChange={(checked) => {
             setIsHuman(checked);
             if (checkboxError) setCheckboxError(false);
           }}
         />
       </div>
 
-      <Footer/>
+      <Footer />
     </form>
   );
 };

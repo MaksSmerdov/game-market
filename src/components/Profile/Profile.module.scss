@@ -1,5 +1,5 @@
-@use "../../styles/mixins" as mixins;
-@use "../../styles/variables" as vars;
+@use '../../styles/mixins' as mixins;
+@use '../../styles/variables' as vars;
 
 .profile {
   position: relative;
@@ -71,7 +71,7 @@
   gap: 8px;
   color: vars.$white;
   font-size: 18px;
-  transition: color .3s ease;
+  transition: color 0.3s ease;
 
   &:hover {
     color: vars.$puissant-purple;

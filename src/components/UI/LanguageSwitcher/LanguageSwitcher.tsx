@@ -11,14 +11,14 @@ export interface LanguageSwitcherProps {
 }
 
 const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
-                                                             value,
-                                                             options = ['RU', 'EN'],
-                                                             onChange,
-                                                             className = '',
-                                                           }) => {
+  value,
+  options = ['RU', 'EN'],
+  onChange,
+  className = '',
+}) => {
   return (
     <div className={`${styles['switcher']} ${className}`}>
-      {options.map(lang => (
+      {options.map((lang) => (
         <button
           key={lang}
           type="button"
@@ -28,8 +28,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
           btn-reset`}
           onClick={() => {
             if (lang !== value) onChange(lang);
-          }}
-        >
+          }}>
           {lang}
         </button>
       ))}

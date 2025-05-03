@@ -1,16 +1,12 @@
 import React from 'react';
 import styles from './GameCard.module.scss';
 import coverImg from '../../assets/card.png';
-import Tag from "../UI/Tag/Tag.tsx";
+import Tag from '../UI/Tag/Tag.tsx';
 
 const GameCard: React.FC = () => (
   <div className={styles['game-card']}>
     <div className={styles['game-card__cover-wrapper']}>
-      <img
-        src={coverImg}
-        alt="Atomic Heart"
-        className={styles['game-card__cover-image']}
-      />
+      <img src={coverImg} alt="Atomic Heart" className={styles['game-card__cover-image']} />
     </div>
 
     <div className={styles['game-card__info']}>
@@ -22,7 +18,10 @@ const GameCard: React.FC = () => (
           <Tag variant="timer">Время на активацию 00:00:00</Tag>
         </div>
       </div>
-      <p className={styles['game-card__description']}>{`Для активации DLC нужна\nосновная игра на аккаунте`}</p>
+      <p
+        className={
+          styles['game-card__description']
+        }>{`Для активации DLC нужна\nосновная игра на аккаунте`}</p>
     </div>
   </div>
 );

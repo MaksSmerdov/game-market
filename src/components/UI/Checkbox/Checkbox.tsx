@@ -1,7 +1,7 @@
-import React, {ChangeEvent, useContext} from 'react';
+import React, { ChangeEvent, useContext } from 'react';
 import styles from './Checkbox.module.scss';
 import okSrc from '../../../assets/svg/ok.svg';
-import {ResponsiveContext} from "../../../context/ResponsiveContext.tsx";
+import { ResponsiveContext } from '../../../context/ResponsiveContext.tsx';
 
 export interface CheckboxProps {
   checked?: boolean;
@@ -10,16 +10,9 @@ export interface CheckboxProps {
   onChange?: (checked: boolean) => void;
 }
 
-const Checkbox: React.FC<CheckboxProps> = ({
-                                             checked = false,
-                                             error = false,
-                                             label,
-                                             onChange,
-                                           }) => {
-  const {isMobile} = useContext(ResponsiveContext);
-  const sizeClass = isMobile
-    ? styles['checkbox--mobile']
-    : styles['checkbox--desktop'];
+const Checkbox: React.FC<CheckboxProps> = ({ checked = false, error = false, label, onChange }) => {
+  const { isMobile } = useContext(ResponsiveContext);
+  const sizeClass = isMobile ? styles['checkbox--mobile'] : styles['checkbox--desktop'];
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     onChange?.(e.target.checked);
@@ -44,18 +37,10 @@ const Checkbox: React.FC<CheckboxProps> = ({
           onChange={handleChange}
         />
         <span className={styles['checkbox__box']}>
-          {checked && !error && (
-            <img
-              src={okSrc}
-              alt="ok"
-              className={styles['checkbox__icon']}
-            />
-          )}
+          {checked && !error && <img src={okSrc} alt="ok" className={styles['checkbox__icon']} />}
         </span>
       </label>
-      <span className={styles['checkbox__label']}>
-        {label}
-      </span>
+      <span className={styles['checkbox__label']}>{label}</span>
     </div>
   );
 };

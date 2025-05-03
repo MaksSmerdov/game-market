@@ -1,5 +1,5 @@
-@use "../../../styles/mixins" as mixins;
-@use "../../../styles/variables" as vars;
+@use '../../../styles/mixins' as mixins;
+@use '../../../styles/variables' as vars;
 
 .checkbox {
   display: flex;
@@ -19,7 +19,6 @@
     opacity: 0;
     width: 0;
     height: 0;
-
   }
 
   &__box {

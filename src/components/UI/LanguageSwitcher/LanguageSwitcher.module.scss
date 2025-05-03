@@ -1,5 +1,5 @@
-@use "../../../styles/mixins" as mixins;
-@use "../../../styles/variables" as vars;
+@use '../../../styles/mixins' as mixins;
+@use '../../../styles/variables' as vars;
 
 .switcher {
   display: flex;
@@ -11,7 +11,9 @@
     color: vars.$white;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.5s ease, color 0.5s ease;
+    transition:
+      background-color 0.5s ease,
+      color 0.5s ease;
 
     &:hover {
       background-color: vars.$nero;
